@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Internet of Things - a road to success or absolute failure</title>
+
+		<meta name="description" content="OSS creates heroes...you can be next!!!">
+		<meta name="author" content="Stefan Daugaard Poulsen">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Include the appropriate print stylesheet -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+						#Internet of Things
+						##a road to success or absolute failure
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Who am I?
+
+							* Stefan Daugaard Poulsen
+							* Aarhus, Denmark
+							* AP in computer science
+							* Jack of many trades at ditmer a/s
+								* Developer <!-- .element: class="fragment roll-in" -->
+								* Consultant <!-- .element: class="fragment roll-in" -->
+								* Security <!-- .element: class="fragment roll-in" -->
+								* Infrastructure <!-- .element: class="fragment roll-in" -->
+								* ...but not management <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#Where am I?
+
+							* [@cyberzeddk](http://twitter.com/cyberzeddk)
+							* [http://cyberzed.dk](http://cyberzed.dk)
+							* [http://github.com/cyberzed](http://github.com/cyberzed)
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#State of the union
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Greatest invention ever
+							##...since 1999 <!-- .element: class="fragment roll-in" -->
+
+							![Nice move](images/nice_move.gif) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Where are we currently?
+
+							* Enterprises <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Hobbyist <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+
+							![Hobbyist](images/hobbyist.jpg) <!-- .element: class="fragment roll-in"  data-fragment-index="2" -->
+							* The VB6 days of programming <!-- .element: class="fragment roll-in"  data-fragment-index="3" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Consumer level devices?
+
+							* What would my ?? use?
+								* Girlfriend <!-- .element: class="fragment roll-in" -->
+								* Sister <!-- .element: class="fragment roll-in" -->
+								* Mom/dad <!-- .element: class="fragment roll-in" -->
+
+							![Ninjasphere](images/06eb1d08-9661-4c7a-91b1-d54738b4904a.png) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							![LIFX](images/white-800.jpg)
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#LIFX
+
+							* A lightbulb <!-- .element: class="fragment roll-in" -->
+							* Color control <!-- .element: class="fragment roll-in" -->
+							* Some integrations <!-- .element: class="fragment roll-in" -->
+							* Firmware updatable <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![dotMorten](images/dotMorten_Lightbulb.png)
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							![Ring](images/photo-original.jpg)
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#Ring
+
+							* A wearable input device
+							* Sounds as awesome as <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Siri <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Cortana <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Hey Google <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![Praise](images/praise_the_ring.png)
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![Nope](images/nope_ring.png)
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+							#Healthtrackers
+
+							* Microsoft Band
+							* Apple Watch
+							* Fitbit
+							* Sony
+							* Garmin
+							* etc.
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							##Is it good enough?
+
+							* Devices work on their own <!-- .element: class="fragment roll-in" -->
+								* Might integrate with a few other things <!-- .element: class="fragment roll-in" -->
+							* Devices require complex setup or knowledge <!-- .element: class="fragment roll-in" -->
+							* Rely on Wi-Fi <!-- .element: class="fragment roll-in" -->
+							* Might even be so silly to use ReST’ish <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![ReST in peace](images/ReST_for_IoT.png)
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						![Spicegirls](images/spicegirls.gif) <!-- .element: class="fragment roll-in" -->
+
+						Now tell me what you want, what you really really want! <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Path to heaven?
+
+						* Useful <!-- .element: class="fragment roll-in" -->
+							* Not just another piece of shiny hardware <!-- .element: class="fragment roll-in" -->
+						* Non-intrusive <!-- .element: class="fragment roll-in" -->
+							* I don’t even want to know it’s there <!-- .element: class="fragment roll-in" -->
+						* Reliable <!-- .element: class="fragment roll-in" -->
+							* If we can’t rely on it we won’t use it <!-- .element: class="fragment roll-in" -->
+						* Enhancing <!-- .element: class="fragment roll-in" -->
+							* Let your current world become better <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							##So what is IoT all about?
+
+							* Manual Proximity <!-- .element: class="fragment roll-in" -->
+							* Automatic Proximity <!-- .element: class="fragment roll-in" -->
+							* Auto sensory <!-- .element: class="fragment roll-in" -->
+							* Simple and direct user feedback <!-- .element: class="fragment roll-in" -->
+							* Extensive feedback <!-- .element: class="fragment roll-in" -->
+							* Mindchangers <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Manual proximity
+
+							* Self checkout <!-- .element: class="fragment roll-in" -->
+							* RFID access cards <!-- .element: class="fragment roll-in" -->
+							* Pet ID-chips <!-- .element: class="fragment roll-in" -->
+							* BitCoin transfer <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Automatic proximity
+
+							* Inventory <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Asset/inventory management <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Replenish, bookkeeping or alerting <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Automatic checkout <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+							* Car unlocking <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Auto sensory
+
+							* Precision agriculture <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Sensors everywhere <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* …even in trees for example <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+							* Smoke detectors, intrusion detection <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							* Early warning systems <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+								* Earthquake, flooding, etc. <!-- .element: class="fragment roll-in" data-fragment-index="5" -->
+							* Anti-forgery / Anti-tampering <!-- .element: class="fragment roll-in" data-fragment-index="6" -->
+								* Cost / Benefit <!-- .element: class="fragment roll-in" data-fragment-index="6" -->
+							* Security <!-- .element: class="fragment roll-in" data-fragment-index="7" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Simple and direct user feedback
+
+							* Personal assistants <!-- .element: class="fragment roll-in" -->
+								* Location aware reminders <!-- .element: class="fragment roll-in" -->
+							* Enhancers <!-- .element: class="fragment roll-in" -->
+								* Early information on next step for factory workers <!-- .element: class="fragment roll-in" -->
+								* Securing factory workers <!-- .element: class="fragment roll-in" -->
+							* Dynamic pricing on perishable goods <!-- .element: class="fragment roll-in" -->
+								* Simple signal displaying freshness of the goods <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Extensive feedback
+
+							* Manuals <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Value-based shopping <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* …or allergy-based shopping <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							* Augmentation <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+							* Phone will be the driver <!-- .element: class="fragment roll-in" data-fragment-index="5" -->
+								* Google glasses <!-- .element: class="fragment roll-in" data-fragment-index="6" -->
+								* Microsoft HoloLens <!-- .element: class="fragment roll-in" data-fragment-index="6" -->
+								* Or a device we haven’t got at a consumer level <!-- .element: class="fragment roll-in" data-fragment-index="6" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Mindchangers
+
+							* Toothbrush <!-- .element: class="fragment roll-in" -->
+								* Enabling a comic character jumping in the mirror <!-- .element: class="fragment roll-in" -->
+							* Crowd based decisions <!-- .element: class="fragment roll-in" -->
+								* Cutting water/energy usage, based on peers <!-- .element: class="fragment roll-in" -->
+								* Being more environmental by peerpressure <!-- .element: class="fragment roll-in" -->
+							* Insurance / Banking <!-- .element: class="fragment roll-in" -->
+								* Based on your behaviour <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##What can these concepts do for us?
+
+							* Creating a better world <!-- .element: class="fragment roll-in" -->
+								* Collectively <!-- .element: class="fragment roll-in" -->
+								* Personally <!-- .element: class="fragment roll-in" -->
+							* Removing the boring parts of life <!-- .element: class="fragment roll-in" -->
+								* So we can spend time on interesting stuff <!-- .element: class="fragment roll-in" -->
+							* Make us into mindless drones <!-- .element: class="fragment roll-in" -->
+
+							![Wall-e](images/walle.gif) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Leveraging IoT
+							##for a higher goal
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##The business perspective
+
+							* Cisco <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* 19$ trillion market value within the next 10 years <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* 50 billion people and things connected in 2020 <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* ABI Research <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* 40.9 billion devices in 2020 <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* 75% will be non-hub aka sensors <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+							* Gartner <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+								* 5 billion devices in 2015 <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+								* 26 billion devices in 2020 <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Technique
+
+							* Solving problems <!-- .element: class="fragment roll-in" -->
+							* Don’t repeat history <!-- .element: class="fragment roll-in" -->
+							* Data mining <!-- .element: class="fragment roll-in" -->
+							* Machine learning <!-- .element: class="fragment roll-in" -->
+							* Security first <!-- .element: class="fragment roll-in" -->
+							* Ensuring consumer privacy <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Device requirements
+
+							* Simple <!-- .element: class="fragment roll-in" -->
+							* Open <!-- .element: class="fragment roll-in" -->
+							* Autonomy <!-- .element: class="fragment roll-in" -->
+							* Cheap <!-- .element: class="fragment roll-in" -->
+							* Consumer friendly <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Options
+
+							* Retail <!-- .element: class="fragment roll-in" -->
+							* Selfdriving cars <!-- .element: class="fragment roll-in" -->
+							* Wearables <!-- .element: class="fragment roll-in" -->
+								* That is soooo last year, we want invisibles <!-- .element: class="fragment roll-in" -->
+							* Healthcare <!-- .element: class="fragment roll-in" -->
+							* Insurance <!-- .element: class="fragment roll-in" -->
+							* Office enhancements <!-- .element: class="fragment roll-in" -->
+							* Perfectionist production <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##How will you do it?
+
+							* Digitize <!-- .element: class="fragment roll-in" -->
+							* Analyze <!-- .element: class="fragment roll-in" -->
+							* Optimize <!-- .element: class="fragment roll-in" -->
+
+							![Sherlock](images/sherlock.gif) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Challenges!
+
+							![Tank](images/tank.gif)
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Overall IoT Challenges
+
+							* Privacy <!-- .element: class="fragment roll-in" -->
+							* Security <!-- .element: class="fragment roll-in" -->
+							* Data processing <!-- .element: class="fragment roll-in" -->
+							* Data storage <!-- .element: class="fragment roll-in" -->
+							* Futuristic thinking <!-- .element: class="fragment roll-in" -->
+								* Enhance our current world <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Developer IoT Challenges
+
+							* Closed platforms <!-- .element: class="fragment roll-in" -->
+							* Different protocols <!-- .element: class="fragment roll-in" -->
+							* Last mile communication <!-- .element: class="fragment roll-in" -->
+							* Lack of good devices <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Openness
+
+							* Be available everywhere <!-- .element: class="fragment roll-in" -->
+							* Open platform <!-- .element: class="fragment roll-in" -->
+								* Samsung is planning to be 90% internet enabled <!-- .element: class="fragment roll-in" -->
+								* On top of that Samsung promise to be open to devs <!-- .element: class="fragment roll-in" -->
+							* Be open to 3rd parties, don’t be snapchat <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Protocols
+
+							* Talking to people is hard <!-- .element: class="fragment roll-in" -->
+								* Devices are currently as hard <!-- .element: class="fragment roll-in" -->
+							* Home automation <!-- .element: class="fragment roll-in" -->
+								* Apple HomeKit <!-- .element: class="fragment roll-in" -->
+								* OpenHAB <!-- .element: class="fragment roll-in" -->
+							* Initiatives <!-- .element: class="fragment roll-in" -->
+								* Open Interconnect Consortium <!-- .element: class="fragment roll-in" -->
+								* AllJoyn <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Last mile communication
+
+							* WiFi <!-- .element: class="fragment roll-in" -->
+							* Bluetooth LE <!-- .element: class="fragment roll-in" -->
+							* ZigBee <!-- .element: class="fragment roll-in" -->
+							* Z-wave <!-- .element: class="fragment roll-in" -->
+							* 6LowPAN <!-- .element: class="fragment roll-in" -->
+							* Thread <!-- .element: class="fragment roll-in" -->
+							* …others <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##What can we do as developers?
+
+							* Build awesome prototypes <!-- .element: class="fragment roll-in" -->
+								* …and then morph into final products <!-- .element: class="fragment roll-in" -->
+							* Shift focus from hardware and interaction <!-- .element: class="fragment roll-in" -->
+								* Look at data processing <!-- .element: class="fragment roll-in" -->
+								* Machine learning <!-- .element: class="fragment roll-in" -->
+							* Ensure we understand the difficulties <!-- .element: class="fragment roll-in" -->
+								* Like last mile communication <!-- .element: class="fragment roll-in" -->
+							* Understand security and privacy <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Getting past
+							##the electrical engineering stuff
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Devices might shift our focus
+
+							* ThingSee One
+							* TI SensorTag
+							* Raspberry Pi / Arduino / This weeks device
+								* If we know what we are doing
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##ThingSee One
+
+							* Finish Haltian
+							* Lets you focus on leveraging sensors
+							* Communication channels can be tested
+							* Long battery life for remote usage / testing
+
+							![Thingsee One](images/thingsee_one.png)
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##ThingSee One
+
+							* Weather resistant
+							* Cellular, Bluetooth & WiFi
+							* Sensors overload
+								* A-GPS and GNSS
+								* 3-axis accelerometer
+								* Humidity
+								* Temperatur
+								* Pressure
+								* Gyroscope
+								* Magnetometer
+								* Light sensor
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##TI SensorTag
+
+							* V2 is coming to the market now
+							* Wi-Fi edition is coming soon'ish
+							* Awkward protocol
+								* You need a sniffer if you want PC communication
+							* Doesn’t work on all mobile devices
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##TI SensorTag
+
+							* Pressure
+							* Humidity
+							* IR Temperature sensor
+							* Accelerometer
+							* Gyroscope
+							* Magnetometer
+							* Light sensor
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Raspberry Pi / Arduino
+
+							* Build whatever you want <!-- .element: class="fragment roll-in" -->
+							* You will need electrical engineer knowledge <!-- .element: class="fragment roll-in" -->
+							* Will often include work on a breadboard <!-- .element: class="fragment roll-in" -->
+							* No in the box solution with sensors etc. <!-- .element: class="fragment roll-in" -->
+							* You want to buy a box, a battery, sensors, etc. <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![Clemens](images/3d_box_on_a_prototype.png)
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						##All I want for Xmas
+
+						* Open platforms <!-- .element: class="fragment roll-in" -->
+						* Big Data <!-- .element: class="fragment roll-in" -->
+						* Machine learning <!-- .element: class="fragment roll-in" -->
+						* Automation of everything <!-- .element: class="fragment roll-in" -->
+							* …in a non creepy manner <!-- .element: class="fragment roll-in" -->
+						* Invisibles / ingestibles <!-- .element: class="fragment roll-in" -->
+						* Talk to real people and solve their problems <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Questions?
+
+						![Questions](images/riddler.gif)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						![Thank you](images/thankyou.gif)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						![THE END](images/theend.gif)
+
+						###BY CYBERZED
+						@cyberzeddk
+					</script>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					//{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
