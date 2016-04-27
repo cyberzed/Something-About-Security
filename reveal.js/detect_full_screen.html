@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Detect Full-Screen</title>
+<style>
+
+* {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+#full_screen_info {
+  background: #ff0;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<p>
+  Detects if window is full-screen, by<br />
+  comparing window vs. screen size.
+</p>
+<p>
+  <span id="full_screen_info"></span>
+</p>
+<ul>
+  <li>
+    Screen width = <span id="screen_width_info"></span>
+  </li>
+  <li>
+    Screen height = <span id="screen_height_info"></span>
+  </li>
+  <li>
+    Window width = <span id="window_width_info"></span>
+  </li>
+  <li>
+    Window height = <span id="window_height_info"></span>
+  </li>
+  <li>
+    Document width = <span id="doc_width_info"></span>
+  </li>
+  <li>
+    Document height = <span id="doc_height_info"></span>
+  </li>
+</ul>
+<p>
+  Code viewable <a href="https://gist.github.com/978838">here</a>.
+</p>
+<script>
+(function(w, s, d) {
+  var timer;
+  var full_screen_info = d.getElementById('full_screen_info');
+  var screen_width_info = d.getElementById('screen_width_info');
+  var screen_height_info = d.getElementById('screen_height_info');
+  var window_width_info = d.getElementById('window_width_info');
+  var window_height_info = d.getElementById('window_height_info');
+  var doc_width_info = d.getElementById('doc_width_info');
+  var doc_height_info = d.getElementById('doc_height_info');
+
+  function detect_full_screen() {
+    // This clearInterval is for IE.
+    clearInterval(timer);
+
+    var d_width = d.documentElement.clientWidth || 0;
+    var d_height = d.documentElement.clientHeight || 0;
+    var w_width = w.innerWidth || 0; /* Inner, instead of outer, for IE9 */
+    var w_height = w.outerHeight || 0;
+    var s_width = s.width || 0;
+    var s_height = s.height || 0;
+
+    if ((w_width === s_width && w_height === s_height) || (d_width === s_width && d_height === s_height)) {
+      full_screen_info.innerHTML = 'Window is full-screen';
+    }
+    else {
+      full_screen_info.innerHTML = 'Window not full-screen';
+    }
+
+    screen_width_info.innerHTML = s_width;
+    screen_height_info.innerHTML = s_height;
+    window_width_info.innerHTML = w_width;
+    window_height_info.innerHTML = w_height;
+    doc_width_info.innerHTML = d_width;
+    doc_height_info.innerHTML = d_height;
+  }
+
+  detect_full_screen();
+
+  function bridge() {
+    // Clear as window resize fires.
+    clearInterval(timer);
+    timer = setInterval(detect_full_screen, 100);
+  }
+
+  if (w.addEventListener) {
+    w.addEventListener('resize', bridge, false);
+  }
+  else if (w.attachEvent) {
+    w.attachEvent('onresize', bridge);
+  }
+  else {
+    w.onresize = bridge;
+  }
+})(this, this.screen, this.document);
+</script>
+</body>
+</html>

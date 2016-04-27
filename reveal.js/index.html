@@ -24,6 +24,12 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+			/*document.onkeydown = function (e) {
+  			if (e.keyCode === 116) {
+    			return false;
+  			}
+			};*/
 		</script>
 
 		<!--[if lt IE 9]>
@@ -87,6 +93,7 @@
 							* Stefan Daugaard Poulsen
 							* Aarhus, Denmark
 							* AP in computer science
+							* CISSP
 							* Jack of many trades at ditmer a/s
 								* Developer <!-- .element: class="fragment roll-in" -->
 								* Consultant <!-- .element: class="fragment roll-in" -->
@@ -107,13 +114,15 @@
 					</section>
 				</section>
 
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							#What do we think security is?
-						</script>
-					</section>
+				<!-- Part I - What is security -->
 
+				<section data-markdown>
+					<script type="text/template">
+						#What do we think security is?
+					</script>
+				</section>
+
+				<section>
 					<section data-markdown>
 						<script type="text/template">
 							![Swordfish](images/swordfish_dod.png)
@@ -140,16 +149,68 @@
 							Hack the Gibson
 						</script>
 					</section>
+				</section>
 
+				<section>
 					<section data-markdown>
 						<script type="text/template">
 							##Passwords?
 
-							* Reuse
-							* Weak
-							* Written on the wall
+							* Reuse <!-- .element: class="fragment roll-in" -->
+							* Weak <!-- .element: class="fragment roll-in" -->
+							* Written on the wall <!-- .element: class="fragment roll-in" -->
+
 							Note:
 							2015 study showed 59% of americans reuse passwords
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Cracking facts
+							##It used to be hard <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Oldsk00l stats
+
+							* 6 chars using all printable chars <!-- .element: class="fragment roll-in" -->
+								* 735.091.890.625 (95^6) different combinations <!-- .element: class="fragment roll-in" -->
+								* 29 years in 1979 <!-- .element: class="fragment roll-in" -->
+
+							Note:
+							Longer passwords wasn't always a proportional better solution
+
+							WinXP LanMan compatibility split the password into two hashes
+
+							26^7 + 26^7 instead of 26^14
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Fast forward
+
+							* 2012 <!-- .element: class="fragment roll-in" -->
+								* 350.000.000.000 password guesses per second <!-- .element: class="fragment roll-in" -->
+								* So roughly 2,5 seconds for (95^6) <!-- .element: class="fragment roll-in" -->
+
+								Note:
+								5 servers, 25 GPU
+
+								http://arstechnica.com/security/2012/12/25-gpu-cluster-cracks-every-standard-windows-password-in-6-hours/
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Longer passwords
+
+							* 15 chars takes a while... <!-- .element: class="fragment roll-in" -->
+								* 463.291.230.159.753.366.058.349.609.375 (95^15) different combinations <!-- .element: class="fragment roll-in" -->
+								* 41.973.910.103 years (with the 2012 setup) <!-- .element: class="fragment roll-in" -->
 						</script>
 					</section>
 
@@ -158,56 +219,44 @@
 							![Writing on the wall](images/Super-Bowl-password.jpg)
 						</script>
 					</section>
+				</section>
 
-					<section data-markdown>
-						<script type="text/template">
-							##HTTPS?
+				<section data-markdown>
+					<script type="text/template">
+						##HTTPS?
 
-							Note:
-							We all know but does our mother?
+						* Does it solve everything? <!-- .element: class="fragment roll-in" -->
 
-							When is it insecure?
-						</script>
-					</section>
+						Note:
+						We all know but does our mother?
 
-					<section data-markdown>
-						<script type="text/template">
-							##Going oldsk00l
+						When is it insecure?
+					</script>
+				</section>
 
-							* SQL Injection
-							* OWASP Top 10 - 2013
+				<section data-markdown>
+					<script type="text/template">
+						##Other?
 
-							Note:
-							SQL Injections, are you sure you got it under control
+						Note:
+						Missing authentication
 
-							Rumors says it's part of the leak of Panama papers
-						</script>
-					</section>
+						Config left overs
 
-					<section data-markdown>
-						<script type="text/template">
-							##Other?
+						Allowing non-secure content
+					</script>
+				</section>
 
-							Note:
-							Missing authentication
-
-							Config left overs
-
-							Allowing non-secure content
-						</script>
-					</section>
-
-					<section data-markdown>
-						<script type="text/template">
-							###Is it only software and hardware?
-						</script>
-					</section>
+				<section data-markdown>
+					<script type="text/template">
+						###Is it only software and hardware?
+					</script>
 				</section>
 
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							#Basics of security
+							#Essential security
 
 							## C-I-A <!-- .element: class="fragment roll-in" -->
 						</script>
@@ -365,7 +414,11 @@
 							* Hacking Team
 							* Office of Personnel Management
 							* Panama Papers
+							* BeautifulPeople
 							* Slack
+
+							Note:
+							Sometimes it is evil intent other times it's lack of procedure or actually following the procedure
 					</script>
 				</section>
 
@@ -392,6 +445,34 @@
 								Attack vectors
 							</script>
 						</section>
+				</section>
+
+				<!-- Part II - Securing HTTPS -->
+
+				<section data-markdown>
+					<script type="text/template">
+						##What we already
+						##should be securing
+						###[OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10) <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						* SQL Injection <!-- .element: class="fragment roll-in" -->
+						* Broken Authentication / Session Management <!-- .element: class="fragment roll-in" -->
+						* XSS <!-- .element: class="fragment roll-in" -->
+						* Direct Object Reference <!-- .element: class="fragment roll-in" -->
+						* Security Misconfiguration <!-- .element: class="fragment roll-in" -->
+						* Sensitive Data Exposure <!-- .element: class="fragment roll-in" -->
+						* Missing Function Level Access Control <!-- .element: class="fragment roll-in" -->
+						* CSRF <!-- .element: class="fragment roll-in" -->
+						* Vulnerable components <!-- .element: class="fragment roll-in" -->
+						* Unvalidated redirects <!-- .element: class="fragment roll-in" -->
+
+						Note:
+						Rumors says it's part of the leak of Panama papers
+					</script>
 				</section>
 
 				<section data-markdown>
