@@ -216,7 +216,9 @@
 
 					<section data-markdown>
 						<script type="text/template">
-							![Writing on the wall](images/Super-Bowl-password.jpg)
+							##Writings on the wall
+
+							![Writing on the wall](images/Super-Bowl-password.jpg) <!-- .element: class="fragment roll-in" -->
 						</script>
 					</section>
 				</section>
@@ -399,8 +401,8 @@
 						<script type="text/template">
 							##How to rate risk?
 
-							* Likelihood
-							* Consequence
+							* Likelihood <!-- .element: class="fragment roll-in" -->
+							* Consequence <!-- .element: class="fragment roll-in" -->
 						</script>
 					</section>
 
@@ -408,18 +410,18 @@
 						<script type="text/template">
 							##Qualify likelihood
 
-							* Skill <!-- .element: class="fragment roll-in" -->
-								* High skill level required <!-- .element: class="fragment roll-in" -->
-								* Low or no skill required <!-- .element: class="fragment roll-in" -->
-							* Ease of Access <!-- .element: class="fragment roll-in" -->
-								* Very difficult to do <!-- .element: class="fragment roll-in" -->
-								* Very simple to do <!-- .element: class="fragment roll-in" -->
-							* Incentive <!-- .element: class="fragment roll-in" -->
-								* High incentive <!-- .element: class="fragment roll-in" -->
-								* Low incentive <!-- .element: class="fragment roll-in" -->
-							* Resource <!-- .element: class="fragment roll-in" -->
-								* Requires expensive or rare equipment <!-- .element: class="fragment roll-in" -->
-								* No resources required <!-- .element: class="fragment roll-in" -->
+							* Skill <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* High skill level required <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Low or no skill required <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Ease of Access <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* Very difficult to do <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* Very simple to do <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+							* Incentive <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+								* High incentive <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+								* Low incentive <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							* Resource <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+								* Requires expensive or rare equipment <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+								* No resources required <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
 
 							Note:
 							Does not fit all threats
@@ -430,16 +432,16 @@
 						<script type="text/template">
 							##Consequence
 
-							* Insignificant
-								* Low - No business impact
-							* Minor
-								* Low - Minor business impact, some loss of confidence
-							* Moderate
-								* Medium - Business is interrupted, loss of confidence
-							* Major
-								* High - Business is disrupted, major loss of confidence
-							* Catastrophic
-								* High - Business cannot continue
+							* Insignificant <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* Low - No business impact <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Minor <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* Low - Minor business impact, some loss of confidence <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+							* Moderate <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+								* Medium - Business is interrupted, loss of confidence <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							* Major <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+								* High - Business is disrupted, major loss of confidence <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+							* Catastrophic <!-- .element: class="fragment roll-in" data-fragment-index="5" -->
+								* High - Business cannot continue <!-- .element: class="fragment roll-in" data-fragment-index="5" -->
 						</script>
 					</section>
 
@@ -562,21 +564,35 @@
 							<script type="text/template">
 								##Attack vectors
 
-								* Old hardware
-								* Vulnerabilities
-								* Human errors
-									* Lack of awareness
-								* Lack of procedure
+								* Old hardware <!-- .element: class="fragment roll-in" -->
+								* Vulnerabilities <!-- .element: class="fragment roll-in" -->
+								* Human errors <!-- .element: class="fragment roll-in" -->
+									* Lack of awareness <!-- .element: class="fragment roll-in" -->
+								* Lack of procedure <!-- .element: class="fragment roll-in" -->
 							</script>
 						</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						##Stop Hammertime
+
+						![Hammertime](images/hammertime.gif) <!-- .element: class="fragment roll-in" -->
+					</script>
 				</section>
 
 				<!-- Part II - Securing HTTPS -->
 
 				<section data-markdown>
 					<script type="text/template">
+						#Are we holding it wrong?
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
 						##What we already
-						##should be securing
+						##should be doing
 						###[OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10) <!-- .element: class="fragment roll-in" -->
 					</script>
 				</section>
@@ -599,6 +615,132 @@
 					</script>
 				</section>
 
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							##Don't tell too much
+
+							* X-AspNet-Version <!-- .element: class="fragment roll-in" -->
+							* X-Powered-By <!-- .element: class="fragment roll-in" -->
+							* X-AspNetMvc-Version <!-- .element: class="fragment roll-in" -->
+							* Server <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#HTTPS
+
+							* Is it enough? <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Be aware of...
+
+							![WiFi Pineapple Nano](images/pineapple.jpg) <!-- .element: class="fragment roll-in" -->
+
+							[Pineapples](https://www.wifipineapple.com/) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#MitM
+
+							* Public WiFi <!-- .element: class="fragment roll-in" -->
+							* Guest WiFi <!-- .element: class="fragment roll-in" -->
+							* WiFi addicts <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##What we need to be aware of
+
+							* Content-Security-Policy <!-- .element: class="fragment roll-in" -->
+							* HTTP Strict Transport Security <!-- .element: class="fragment roll-in" -->
+							* Public Key Pinning <!-- .element: class="fragment roll-in" -->
+							* X-Frame-Options <!-- .element: class="fragment roll-in" -->
+							* X-Xss-Protection <!-- .element: class="fragment roll-in" -->
+							* X-Content-Type-Options <!-- .element: class="fragment roll-in" -->
+
+							Note:
+							Trust on first use!
+
+							CSP - Approves sources
+
+							HSTS - Stay on HTTPS
+
+							PKP - SSL on drugs
+
+							XFO - Who can frame you
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##Tools of the trade
+
+							[NWebSec](https://github.com/NWebsec/NWebsec) <!-- .element: class="fragment roll-in" -->
+
+							[Scott Helme](http://scotthelme.co.uk) <!-- .element: class="fragment roll-in" -->
+
+							[OWASP](https://www.owasp.org) <!-- .element: class="fragment roll-in" -->
+
+							[FreedomeVPN](https://www.f-secure.com/en_US/web/home_us/freedome) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							##How to test?
+
+							[http://securityheaders.io](http://securityheaders.io) <!-- .element: class="fragment roll-in" -->
+
+							Note:
+							* https://isc2.org
+							* http://ft.dk
+							* https://politi.dk
+							* http://danskebank.dk
+							* https://danskebank.dk
+						</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						##Remember
+
+						* Security is never done <!-- .element: class="fragment roll-in" -->
+						* Always think about security <!-- .element: class="fragment roll-in" -->
+						* Don't forget privacy <!-- .element: class="fragment roll-in" -->
+						* Don't wait to the last sprint <!-- .element: class="fragment roll-in" -->
+						* Pentesting doesn't show everything <!-- .element: class="fragment roll-in" -->
+						* You might just be the tool <!-- .element: class="fragment roll-in" -->
+						* You have an obligation to do good <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						##Who can I know more?
+
+						[Troy Hunt](http://twitter.com/troyhunt) <!-- .element: class="fragment roll-in" -->
+
+						[Niall Merrigan](http://twitter.com/nmerrigan) <!-- .element: class="fragment roll-in" -->
+
+						[Scott Helme](http://twitter.com/scott_helme) <!-- .element: class="fragment roll-in" -->
+
+						Pluralsight courses <!-- .element: class="fragment roll-in" -->
+
+						Watch conferences talks...there are load of them <!-- .element: class="fragment roll-in" -->
+
+						Find a friend with a security interrest <!-- .element: class="fragment roll-in" -->
+					</script>
+				</section>
+
 				<section data-markdown>
 					<script type="text/template">
 						![Thank you](images/thankyou.gif)
@@ -610,7 +752,7 @@
 						![THE END](images/theend.gif)
 
 						###BY CYBERZED
-						@cyberzeddk
+						[@cyberzeddk](http://twitter.com/cyberzeddk)
 					</script>
 				</section>
 			</div>
