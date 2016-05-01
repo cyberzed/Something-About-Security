@@ -9,7 +9,7 @@ namespace SomethingAboutSecurity
     {
         protected void Application_Start()
         {
-            //MvcHandler.DisableMvcResponseHeader = true;
+            MvcHandler.DisableMvcResponseHeader = true;
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

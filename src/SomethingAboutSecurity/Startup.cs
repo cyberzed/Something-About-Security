@@ -7,7 +7,7 @@ namespace SomethingAboutSecurity
     {
         public void Configuration(IAppBuilder appBuilder)
         {
-            //appBuilder.Use<ContentSecurityPolicy>();
+            appBuilder.Use<ContentSecurityPolicy>();
             //appBuilder.Use<HttpStrictTransportSecurity>();
             //appBuilder.Use<PublicKeyPinning>();
             //appBuilder.Use<XFrameOptions>();
